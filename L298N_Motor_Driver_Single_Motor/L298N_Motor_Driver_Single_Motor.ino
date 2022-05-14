@@ -1,0 +1,24 @@
+#define s1  3
+#define s2  4
+#define switch_1 7
+
+
+void setup() 
+{
+  pinMode(s1,OUTPUT);
+  pinMode(s2,OUTPUT);
+}
+
+void loop() 
+{ 
+  if(digitalRead(switch_1) == HIGH)
+  { 
+    digitalWrite(s1,HIGH);
+    digitalWrite(s2,LOW);
+  }
+  else
+  { 
+    digitalWrite(s2,LOW);
+    digitalWrite(s1,HIGH); 
+  }
+}
